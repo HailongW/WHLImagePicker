@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "ImagePickerManager.h"
 
 @interface ViewController ()
 
@@ -17,6 +18,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [[ImagePickerManager sharedInstance] openWithSource:PhotoLibrary];
+    
 }
 
 

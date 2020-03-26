@@ -16,6 +16,7 @@
 		BC41D081242A4E830042CCA8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BC41D080242A4E830042CCA8 /* main.m */; };
 		BC41D08B242A4E840042CCA8 /* WHLImagePickerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BC41D08A242A4E840042CCA8 /* WHLImagePickerTests.m */; };
 		BC41D096242A4E840042CCA8 /* WHLImagePickerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BC41D095242A4E840042CCA8 /* WHLImagePickerUITests.m */; };
+		BC41D0A5242CE76A0042CCA8 /* ImagePickerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BC41D0A4242CE76A0042CCA8 /* ImagePickerManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		BC41D091242A4E840042CCA8 /* WHLImagePickerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WHLImagePickerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC41D095242A4E840042CCA8 /* WHLImagePickerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WHLImagePickerUITests.m; sourceTree = "<group>"; };
 		BC41D097242A4E840042CCA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC41D0A3242CE76A0042CCA8 /* ImagePickerManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImagePickerManager.h; sourceTree = "<group>"; };
+		BC41D0A4242CE76A0042CCA8 /* ImagePickerManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImagePickerManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,8 @@
 				BC41D072242A4E7C0042CCA8 /* SceneDelegate.m */,
 				BC41D074242A4E7C0042CCA8 /* ViewController.h */,
 				BC41D075242A4E7C0042CCA8 /* ViewController.m */,
+				BC41D0A3242CE76A0042CCA8 /* ImagePickerManager.h */,
+				BC41D0A4242CE76A0042CCA8 /* ImagePickerManager.m */,
 				BC41D077242A4E7C0042CCA8 /* Main.storyboard */,
 				BC41D07A242A4E830042CCA8 /* Assets.xcassets */,
 				BC41D07C242A4E830042CCA8 /* LaunchScreen.storyboard */,
@@ -270,6 +275,7 @@
 				BC41D076242A4E7C0042CCA8 /* ViewController.m in Sources */,
 				BC41D070242A4E7C0042CCA8 /* AppDelegate.m in Sources */,
 				BC41D081242A4E830042CCA8 /* main.m in Sources */,
+				BC41D0A5242CE76A0042CCA8 /* ImagePickerManager.m in Sources */,
 				BC41D073242A4E7C0042CCA8 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
