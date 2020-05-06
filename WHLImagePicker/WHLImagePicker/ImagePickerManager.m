@@ -86,16 +86,28 @@ static ImagePickerManager *imagePickerManager;
 
 - (void)alertAuthorizationTips:(NSString *)message title:(NSString *)title{
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction *alertAction = [UIAlertAction actionWithTitle:@"去设置" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        NSURL*url =[NSURL URLWithString:@"prefs:root=General&path=Bluetooth"];
-        if (@available(iOS 10.0, *)) {
-            url = [NSURL URLWithString:@"App-Prefs:root=Bluetooth"];
-        }
-        if ([[UIApplication sharedApplication] canOpenURL:url]) {
-
-             [[UIApplication sharedApplication] openURL:url];
-        };
-    }];
+//    UIAlertAction *alertAction = [UIAlertAction actionWithTitle:@"去设置" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+//        NSURL*url =[NSURL URLWithString:@"prefs:root=General&path=Bluetooth"];
+//        if (@available(iOS 10.0, *)) {// 使用apple 私有api 审核不通过
+//            url = [NSURL URLWithString:@"App-Prefs:root=Bluetooth"];
+//        }
+//        if ([[UIApplication sharedApplication] canOpenURL:url]) {
+//
+//             [[UIApplication sharedApplication] openURL:url];
+//        };
+//    }];
+    UIAlertAction *alertAction = nil;
+    if (@available(iOS 10.0, *)) {
+        alertAction = [UIAlertAction actionWithTitle:@"去设置" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            NSURL *url = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
+            if ([[UIApplication sharedApplication] canOpenURL:url]) {
+                [[UIApplication sharedApplication] openURL:url];
+            }
+        }];
+    }else {
+        alertAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        }];
+    }
     [alertController addAction:alertAction];
     [[self getCurrentViewController].navigationController presentViewController:self.pickerController animated:YES completion:NULL];
 }
